@@ -316,6 +316,43 @@ body {
     transform: translateX(3px);
 }
 
+.cta-button.business {
+    background: linear-gradient(135deg, #003d82 0%, #00509e 100%);
+    color: var(--bg-white);
+    box-shadow: var(--shadow);
+    position: relative;
+}
+
+.cta-button.business::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.15), transparent);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    border-radius: 10px;
+}
+
+.cta-button.business:hover {
+    background: linear-gradient(135deg, #002d5c 0%, #003d82 100%);
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-xl);
+}
+
+.cta-button.business:hover::before {
+    opacity: 1;
+}
+
+.cta-button.business i {
+    position: relative;
+    z-index: 1;
+}
+
+.cta-button.business span {
+    position: relative;
+    z-index: 1;
+}
+
 /* ===== SOCIAL SECTION ===== */
 .social-section {
     margin-bottom: 2rem;
